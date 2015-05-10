@@ -1,0 +1,68 @@
+<html>
+<head>
+  <script src="css/source-sans-pro.js"></script>
+  <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+
+<script id="index-tpl" type="text/x-handlebars-template">
+    <div class='header'>
+		<h1>Home</h1>
+	</div>
+	<p>Test av phonegap</p>
+	<p>Klikk på en link</p>
+	<ul>
+    	<li><a href="#rest">Test av REST</a></li>
+		<li><a href="#camera">Test av kamera</a></li>
+		<li><a href="#eventyr">Eventyrlig</a></li>
+	</ul>
+</script>
+
+<script id="home-tpl" type="text/x-handlebars-template">
+    <div class='header'><h1>Kamerakamerat</h1></div>
+    <ul>
+      <li>
+        <input class="button" type="button" id="taBilde" value="Ta bilde" />
+      </li>
+    </ul>
+  <img class="bilde" id="bilde"/>
+  <input class="button" type="button" id="lagreBilde" value="Lagre bilde" />
+    <table id="bilder">
+
+    </table>
+</script>
+
+<script id="rest-tpl" type="text/x-handlebars-template">
+	<div class='header'>
+		<a href='#' class="button header-button header-button-left">Back</a>
+		<h1>RestTest</h1>
+	</div>
+	<h2>Siste 10 tweets med "Mesan"</h2>
+	<ul class="tweet-list">loading...</ul>
+</script>
+
+<script id="rest-li-tpl" type="text/x-handlebars-template">
+  		{{#each tweet}}
+  		<li>
+			<img src="{{this.profile_image_url}}" alt="${this.from_user}">
+			<p><b>Fra:</b> {{this.from_user}}</p>
+			<p><b>Tekst:</b> {{this.text}}</p>
+		</li>
+  		{{/each}}
+</script>
+
+<script id="eventyr-tpl" type="text/x-handlebars-template">
+<h1>Eventyrlig</h1>
+</script>
+
+<script src="phonegap.js"></script>
+<script src="lib/handlebars.js"></script>
+<script src="lib/jquery-1.8.2.min.js"></script>
+<script src="js/storage/websql-store.js"></script>
+<script src="js/HomeView.js"></script>
+<script src="js/RestView.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
+</html>

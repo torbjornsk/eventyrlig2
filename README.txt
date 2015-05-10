@@ -1,0 +1,1 @@
+Dette er mappen for Phonegap-delen av miniprosjektet.
